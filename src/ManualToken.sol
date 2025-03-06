@@ -29,6 +29,6 @@ contract ManualToken {
         uint256 previousBalances = balanceOf(msg.sender) + balanceOf(_to);
         s_balances[msg.sender] = s_balances[msg.sender] - amount;
         s_balances[_to] = s_balances[_to] + amount;
-        require(balanceOf(msg.sender) + balanceOf(_to) == previousBalances); // Ensure the combined balance remains the same after the transfer
+        require(balanceOf(msg.sender) + balanceOf(_to) == previousBalances); 
     }
 }
