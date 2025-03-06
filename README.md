@@ -1,66 +1,24 @@
-## Foundry
+# Ethereum Token Development Toolkit
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
 
-Foundry consists of:
+This project is a toolkit for Ethereum application development, featuring a custom ERC20 token implementation and a testing framework using Foundry. The toolkit includes the following components:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **OurToken**: A simple ERC20 token contract.
+- **DeployOurToken**: A script for deploying the OurToken contract with an initial supply.
+- **OurTokenTest**: A test suite for the OurToken contract, ensuring functionality and correctness.
 
-## Documentation
+## Components
 
-https://book.getfoundry.sh/
+### OurToken
 
-## Usage
+The `OurToken` contract is an implementation of the ERC20 standard, allowing for the creation and management of fungible tokens. It includes features such as minting, transferring, and balance checking.
 
-### Build
+### DeployOurToken
 
-```shell
-$ forge build
-```
+The `DeployOurToken` script is used to deploy the `OurToken` contract to the Ethereum network. It allows you to specify the deployer's address and the initial supply of tokens.
 
-### Test
+### OurTokenTest
 
-```shell
-$ forge test
-```
+The `OurTokenTest` contract contains unit tests for the `OurToken` contract. It verifies the functionality of token transfers and allowances, ensuring that the contract behaves as expected.
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
